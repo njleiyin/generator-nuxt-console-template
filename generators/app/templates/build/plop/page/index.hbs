@@ -1,0 +1,28 @@
+<template>
+  <div class="{{ kebabCase name }}-page page">
+  </div>
+</template>
+
+<script>
+export default {
+  name: '{{ properCase name }}Page',
+  page: { name: '{{ title }}' }, // 导航配置
+  components: {},
+  data() {
+    return {}
+  },
+  // 页面元配置
+  head() {
+    return { title: '{{ title }}' }
+  },
+  created() {},
+  mounted() {},
+  methods: {}
+}
+</script>
+
+<style lang="less">
+.{{ kebabCase name }}-page {
+  // page style namespace
+}
+</style>

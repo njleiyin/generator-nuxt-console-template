@@ -1,0 +1,2 @@
+pages/**/components/*.vue
+assets/styles/element-ui/theme/index.css

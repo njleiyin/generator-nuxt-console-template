@@ -1,0 +1,272 @@
+@import '~assets/var';
+@mainColor: #1890ff;
+
+body {
+  margin: 0;
+  font-family: 'Monospaced Number', 'Chinese Quote', 'Helvetica Neue For Number', -apple-system,
+    BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+    'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.65);
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+a {
+  color: @mainColor;
+  background-color: transparent;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    color: #40a9ff;
+  }
+}
+
+.tooltip-label .el-tooltip {
+  float: right;
+  transform: translateY(10px);
+}
+
+.root-container {
+  // 设置内容宽度
+  .context-width--full {
+    width: calc(100% - 120px);
+  }
+
+  &--has-second-menu {
+    .context-width--full {
+      width: calc(100% - 240px);
+    }
+  }
+}
+
+.font-m {
+  font-size: 14px;
+}
+
+.f {
+  width: 100%;
+  height: 100%;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.common-wrap {
+  background: #fff;
+  padding: 15px 20px;
+}
+
+// breadcrumb面包屑导航动画
+.breadcrumb-enter-active,
+.breadcrumb-leave-active {
+  transition: all 0.5s;
+}
+
+.breadcrumb-enter,
+.breadcrumb-leave-active {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.breadcrumb-move {
+  transition: all 0.5s;
+}
+
+.breadcrumb-leave-active {
+  position: absolute;
+}
+
+// slide-fade 动画相关样式
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+// 超过一行显示省略号
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 内容容器样式
+.wrapper {
+  background-color: #fff;
+  padding: 12px;
+}
+
+// 红字加粗
+.red-font {
+  color: #fb0f0f;
+  font-weight: bold;
+}
+
+// 菜单侧边栏样式
+.el-menu--popup {
+  &.el-menu {
+    background-color: #001529;
+  }
+
+  .el-menu-item {
+    color: rgba(255, 255, 255, 0.65);
+    height: 40px;
+    line-height: 40px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+
+    &:hover,
+    &:focus {
+      background-color: #001529;
+      color: white;
+    }
+
+    &.is-active {
+      background: #1890ff;
+      color: #fff;
+    }
+  }
+}
+
+// 修改全局按钮样式
+.nuxt-body {
+  // 红字
+  .red {
+    color: @danger !important;
+
+    &:focus {
+      opacity: 0.5;
+      color: @danger;
+    }
+
+    &:hover {
+      opacity: 0.5;
+      color: @danger;
+    }
+  }
+
+  .el-button--primary {
+    background-color: @button-color;
+    border-color: @button-color;
+    color: #fff;
+    min-width: 80px;
+
+    &:focus {
+      background: #66b1ff;
+      border-color: #66b1ff;
+      color: #fff;
+    }
+
+    &:hover {
+      background: #66b1ff;
+      border-color: #66b1ff;
+      color: #fff;
+    }
+
+    &.is-plain {
+      color: @button-color;
+      background: #ecf5ff;
+      border-color: #b3d8ff;
+
+      &:hover {
+        background-color: @button-color;
+        border-color: @button-color;
+        color: #fff;
+      }
+    }
+
+    &.is-disabled {
+      color: #fff;
+      background-color: #a0cfff;
+      border-color: #a0cfff;
+    }
+  }
+
+  // 兼容ie浏览器出现莫名其妙的横线
+  .el-table__fixed-right::before {
+    display: none;
+  }
+}
+
+.el-cascader-menu {
+  min-height: 40px;
+}
+
+.el-dropdown-menu__item {
+  &.active {
+    background-color: #ecf5ff;
+    color: #66b1ff;
+  }
+}
+
+.el-tabs {
+  .el-tabs__nav-wrap::after {
+    height: 1px;
+  }
+}
+
+.el-date-editor.el-input,
+.el-date-editor.el-input__inner {
+  width: 100% !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+// 滚动条的轨道的两端按钮 此处隐藏
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+// 边角，即垂直滚动条和水平滚动条相交的地方
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  /* 滚动条里面轨道 */
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid rgba(0, 0, 0, 0);
+  width: 10px;
+  border-radius: 25px;
+  background-clip: padding-box !important;
+  background-color: rgba(0, 0, 0, 0.15);
+
+  &:hover {
+    border: 3px solid rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}

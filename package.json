@@ -1,0 +1,30 @@
+{
+  "name": "generator-console-nuxt-template",
+  "version": "0.0.1",
+  "description": "基于nuxt框架快速生成管理端项目",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/njleiyin/generator-nuxt-console-template"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "vue",
+    "element-ui",
+    "nuxt",
+    "@leiyin/el-data-table",
+    "@leiyin/el-form-renderer"
+  ],
+  "author": "leiyin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/njleiyin/generator-nuxt-console-template/issues"
+  },
+  "homepage": "https://github.com/njleiyin/generator-nuxt-console-template",
+  "dependencies": {
+    "yeoman-generator": "^5.8.0"
+  }
+}

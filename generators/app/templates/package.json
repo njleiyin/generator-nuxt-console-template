@@ -1,0 +1,110 @@
+{
+  "name": "<%= name %>",
+  "version": "1.0.0",
+  "description": "nuxt脚手架，快速集成el-data-table,el-form-render",
+  "author": "leiyin",
+  "license": "MIT",
+  "keywords": [
+    "vue",
+    "element-ui",
+    "nuxt",
+    "dashboard"
+  ],
+  "engines": {
+    "npm": ">= 5.2.0"
+  },
+  "scripts": {
+    "dev": "cross-env MODE=dev NUXT_HOST=localhost nuxt",
+    "dev:prd": "cross-env MODE=prod NUXT_HOST=localhost nuxt",
+    "build": "cross-env MODE=dev nuxt build",
+    "build:prd": "cross-env MODE=prod nuxt build",
+    "release": "standard-version",
+    "lint": "npm run lint:script & npm run lint:style",
+    "lint:script": "eslint --fix src/**/*.{js,vue}",
+    "lint:style": "stylelint --fix src/**/*.{less,vue}",
+    "new": "plop --plopfile build/plopfile.js"
+  },
+  "dependencies": {
+    "@leiyin/el-data-table": "^1.1.7",
+    "@leiyin/el-form-renderer": "^1.1.0",
+    "@nuxtjs/axios": "^5.8.0",
+    "@nuxtjs/dotenv": "^1.3.0",
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.7.4",
+    "dhtmlx-gantt": "^6.3.7",
+    "docx-preview": "^0.1.14",
+    "dotenv": "^6.0.0",
+    "element-ui": "^2.15.6",
+    "highcharts": "^10.3.1",
+    "js-cookie": "^2.2.0",
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.frompairs": "^4.0.1",
+    "lodash.get": "^4.4.2",
+    "lodash.has": "^4.5.2",
+    "lodash.includes": "^4.3.0",
+    "lodash.isequal": "^4.5.0",
+    "lodash.isplainobject": "^4.0.6",
+    "lodash.kebabcase": "^4.1.1",
+    "lodash.set": "^4.3.2",
+    "lodash.topairs": "^4.3.0",
+    "nuxt": "^2.3.2",
+    "print-js": "^1.6.0",
+    "qrcodejs2": "0.0.2",
+    "qs": "^6.7.0",
+    "standard-version": "^5.0.2",
+    "xlsx": "^0.16.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.16.3",
+    "@babel/preset-react": "^7.18.6",
+    "@nuxtjs/eslint-config": "^8.0.0",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "autoprefixer": "^10.4.7",
+    "babel-plugin-component": "^1.1.0",
+    "case-modifier": "^0.1.1",
+    "cross-env": "^5.1.3",
+    "eslint": "^8.4.1",
+    "eslint-plugin-nuxt": "^3.1.0",
+    "eslint-plugin-vue": "^8.2.0",
+    "husky": "^1.3.1",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "lint-staged": "^8.1.0",
+    "plop": "^2.5.3",
+    "postcss-px-to-viewport": "^1.1.1",
+    "stylelint": "^9.10.0",
+    "stylelint-config-standard": "^18.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-commit": "git update-index --again"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.vue": [
+      "prettier --write",
+      "stylelint --fix",
+      "git add"
+    ],
+    "*.less": [
+      "stylelint --fix",
+      "git add"
+    ]
+  },
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": "3001"
+    }
+  },
+  "standard-version": {
+    "skip": {
+      "commit": true
+    }
+  }
+}

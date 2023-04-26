@@ -1,0 +1,44 @@
+<template>
+  <div class="{{ kebabCase name }}">
+    <el-data-table ref="dataTable" v-access.table v-bind="tableConfig">
+      <template slot="right-btn">
+        <el-button
+          type="primary"
+          class="sp-custom-search-btn"
+          size="small"
+          @click="handleRowUpdate('add')"
+        >
+          新增
+        </el-button>
+      </template>
+    </el-data-table>
+  </div>
+</template>
+
+<script>
+export default {
+  title: '{{ title }}',
+  name: '{{ properCase name }}',
+  components: {},
+  data() {
+    return {
+      // 表格配置
+      tableConfig: {
+        url: '/api', // 接口地址
+        columns: [],
+      },
+    }
+  },
+  mounted() {},
+  methods: {
+    // 打开侧边栏form弹层
+    handleRowUpdate(type, row) {},
+  },
+}
+</script>
+
+<style lang="less">
+.{{ kebabCase name }} {
+  // page style namespace
+}
+</style>
