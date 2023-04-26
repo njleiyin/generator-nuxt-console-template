@@ -24,7 +24,6 @@ module.exports = class extends (
       ".env.dev",
       ".env.prod",
       ".eslintrc.js",
-      ".gitignore",
       ".npmrc",
       ".nuxtignore",
       ".prettierrc",

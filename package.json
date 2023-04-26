@@ -1,6 +1,6 @@
 {
   "name": "generator-nuxt-console-template",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "基于nuxt框架快速生成管理端项目",
   "main": "index.js",
   "scripts": {
