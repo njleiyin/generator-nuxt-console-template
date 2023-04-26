@@ -23,7 +23,6 @@ module.exports = class extends (
       ".editorconfig",
       ".env.dev",
       ".env.prod",
-      ".eslintcache",
       ".eslintrc.js",
       ".gitignore",
       ".npmrc",
