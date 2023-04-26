@@ -1,5 +1,5 @@
 {
-  "name": "generator-console-nuxt-template",
+  "name": "generator-nuxt-console-template",
   "version": "0.0.1",
   "description": "基于nuxt框架快速生成管理端项目",
   "main": "index.js",
