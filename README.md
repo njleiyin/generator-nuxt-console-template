@@ -51,9 +51,7 @@ yo nuxt-console-template
     ├── .editorconfig
     ├── .env.dev
     ├── .env.prod
-    ├── .eslintcache
     ├── .eslintrc.js
-    ├── .gitignore
     ├── .npmrc
     ├── .nuxtignore
     ├── .prettierrc
