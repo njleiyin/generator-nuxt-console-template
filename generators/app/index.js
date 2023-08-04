@@ -1,8 +1,7 @@
 const Generator = require("yeoman-generator");
+const _ = require("lodash");
 
-module.exports = class extends (
-  Generator
-) {
+module.exports = class extends Generator {
   prompting() {
     // 用户输入
     return this.prompt([
@@ -10,7 +9,7 @@ module.exports = class extends (
         type: "input",
         name: "name",
         message: "Your project name",
-        default: this.appname,
+        default: _.kebabCase(this.appname),
       },
     ]).then((params) => {
       this.params = params;
@@ -30,7 +29,7 @@ module.exports = class extends (
       "jsconfig.json",
       "nuxt.config.js",
       "package.json",
-      "README.md"
+      "README.md",
     ];
     templates.forEach((item) => {
       this.fs.copyTpl(

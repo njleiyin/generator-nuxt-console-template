@@ -1,6 +1,6 @@
 {
   "name": "generator-nuxt-console-template",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "基于nuxt框架快速生成管理端项目",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,7 @@
     "url": "https://github.com/njleiyin/generator-nuxt-console-template"
   },
   "keywords": [
+    "yeoman",
     "yeoman-generator",
     "vue",
     "element-ui",
@@ -25,6 +26,7 @@
   },
   "homepage": "https://github.com/njleiyin/generator-nuxt-console-template",
   "dependencies": {
+    "lodash": "^4.17.21",
     "yeoman-generator": "^5.8.0"
   }
 }

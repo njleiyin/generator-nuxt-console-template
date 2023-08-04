@@ -1,6 +1,6 @@
-# mes-console
+# nuxt-console-template
 
-批次mes管理端
+nuxt管理后台
 
 ## Docs
 
